@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-range-picker-with-comparison",
+  "type": "registry:example",
+  "title": "Date Range Picker with Comparison",
+  "description": "A date range picker with comparison mode enabled.",
+  "files": [
+    {
+      "path": "components/examples/date-range-picker-with-comparison.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { DateRangePicker } from \"@/components/date-time-range-picker/date-range-picker\";\nimport type { DateTimeRange } from \"@/components/date-time-range-picker/date-time-range-picker\";\n\nexport default function DateRangePickerWithComparisonExample() {\n  const [dateRange, setDateRange] = useState<{\n    range: DateTimeRange;\n    rangeCompare?: DateTimeRange;\n  }>({\n    range: {\n      from: new Date(),\n      to: new Date(new Date().setDate(new Date().getDate() + 7)),\n    },\n    rangeCompare: {\n      from: new Date(new Date().setFullYear(new Date().getFullYear() - 1)),\n      to: new Date(\n        new Date().setFullYear(\n          new Date().getFullYear() - 1,\n          new Date().getMonth(),\n          new Date().getDate() + 7,\n        ),\n      ),\n    },\n  });\n\n  return (\n    <div className=\"flex flex-col gap-4\">\n      <DateRangePicker\n        initialDateFrom={dateRange.range.from}\n        initialDateTo={dateRange.range.to}\n        initialCompareFrom={dateRange.rangeCompare?.from}\n        initialCompareTo={dateRange.rangeCompare?.to}\n        onUpdate={(values) => setDateRange(values)}\n      />\n\n      <div className=\"mt-4 rounded-md bg-muted p-4\">\n        <pre className=\"text-sm\">\n          {JSON.stringify(\n            dateRange,\n            (key, value) => {\n              if (value instanceof Date) {\n                return value.toISOString();\n              }\n              return value;\n            },\n            2,\n          )}\n        </pre>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "time-input",
+  "type": "registry:component",
+  "title": "Time Input",
+  "description": "A component for inputting time with hours, minutes, and AM/PM.",
+  "files": [
+    {
+      "path": "components/date-time-range-picker/time-input.tsx",
+      "content": "\"use client\";\n\nimport React, { useEffect } from \"react\";\n\nimport { DateInput } from \"./date-input\";\nimport { TimeInput } from \"./date-time-input\";\nimport { cn } from \"@/lib/utils\";\n\ninterface DateTimeInputProps {\n  value?: Date;\n  onChange: (date: Date) => void;\n  disabled?: boolean;\n  className?: string;\n  label?: string;\n}\n\nexport const DateTimeInput: React.FC<DateTimeInputProps> = ({\n  value,\n  onChange,\n  disabled = false,\n  className,\n  label,\n}) => {\n  const [date, setDate] = React.useState<Date>(value || new Date());\n\n  useEffect(() => {\n    if (value) {\n      setDate(new Date(value));\n    }\n  }, [value]);\n\n  const handleDateChange = (newDate: Date) => {\n    if (disabled) return;\n\n    const updatedDate = new Date(newDate);\n    // Preserve the time from the current date\n    if (date) {\n      updatedDate.setHours(\n        date.getHours(),\n        date.getMinutes(),\n        date.getSeconds(),\n        date.getMilliseconds(),\n      );\n    }\n\n    setDate(updatedDate);\n    onChange(updatedDate);\n  };\n\n  const handleTimeChange = (newTime: Date) => {\n    if (disabled) return;\n\n    const updatedDate = new Date(date);\n    updatedDate.setHours(\n      newTime.getHours(),\n      newTime.getMinutes(),\n      newTime.getSeconds(),\n      newTime.getMilliseconds(),\n    );\n\n    setDate(updatedDate);\n    onChange(updatedDate);\n  };\n\n  return (\n    <div className={cn(\"flex flex-col space-y-1\", className)}>\n      {label && <span className=\"text-xs text-muted-foreground\">{label}</span>}\n      <div className=\"flex flex-col sm:flex-row gap-2\">\n        <DateInput value={date} onChange={handleDateChange} />\n        <TimeInput\n          value={date}\n          onChange={handleTimeChange}\n          disabled={disabled}\n        />\n      </div>\n    </div>\n  );\n};\n\nDateTimeInput.displayName = \"DateTimeInput\";\n",
+      "type": "registry:component"
+    }
+  ]
+}

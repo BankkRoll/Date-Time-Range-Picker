@@ -1,0 +1,114 @@
+{
+  "name": "Date Time Range Picker",
+  "homepage": "https://date-time-range-picker.vercel.app",
+  "items": [
+    {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Calendar",
+      "description": "A calendar component for selecting dates.",
+      "files": [
+        {
+          "path": "components/date-time-range-picker/calendar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-input",
+      "type": "registry:component",
+      "title": "Date Input",
+      "description": "A component for inputting dates with separate fields.",
+      "files": [
+        {
+          "path": "components/date-time-range-picker/date-input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "time-input",
+      "type": "registry:component",
+      "title": "Time Input",
+      "description": "A component for inputting time with hours, minutes, and AM/PM.",
+      "files": [
+        {
+          "path": "components/date-time-range-picker/time-input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-time-input",
+      "type": "registry:component",
+      "title": "Date Time Input",
+      "description": "A component that combines date and time input.",
+      "files": [
+        {
+          "path": "components/date-time-range-picker/date-time-input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:component",
+      "title": "Date Range Picker",
+      "description": "A component for selecting a range of dates with presets.",
+      "files": [
+        {
+          "path": "components/date-time-range-picker/date-range-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-time-range-picker",
+      "type": "registry:component",
+      "title": "Date Time Range Picker",
+      "description": "A component for selecting a range of dates and times.",
+      "files": [
+        {
+          "path": "components/date-time-range-picker/date-time-range-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker-basic",
+      "type": "registry:example",
+      "title": "Basic Date Range Picker",
+      "description": "A simple date range picker with default settings.",
+      "files": [
+        {
+          "path": "components/examples/date-range-picker-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker-with-comparison",
+      "type": "registry:example",
+      "title": "Date Range Picker with Comparison",
+      "description": "A date range picker with comparison mode enabled.",
+      "files": [
+        {
+          "path": "components/examples/date-range-picker-with-comparison.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "date-time-range-picker-basic",
+      "type": "registry:example",
+      "title": "Basic Date Time Range Picker",
+      "description": "A date time range picker for selecting dates and times.",
+      "files": [
+        {
+          "path": "components/examples/date-time-range-picker-basic.tsx",
+          "type": "registry:example"
+        }
+      ]
+    }
+  ]
+}
