@@ -8,7 +8,7 @@ export const examples: Registry["items"] = [
     description: "A simple date range picker with default settings.",
     files: [
       {
-        path: "components/examples/date-range-picker-basic.tsx",
+        path: "components/registry/examples/date-range-picker-basic.tsx",
         type: "registry:example",
       },
     ],
@@ -20,7 +20,7 @@ export const examples: Registry["items"] = [
     description: "A date range picker with comparison mode enabled.",
     files: [
       {
-        path: "components/examples/date-range-picker-with-comparison.tsx",
+        path: "components/registry/examples/date-range-picker-with-comparison.tsx",
         type: "registry:example",
       },
     ],
@@ -32,7 +32,7 @@ export const examples: Registry["items"] = [
     description: "A date time range picker for selecting dates and times.",
     files: [
       {
-        path: "components/examples/date-time-range-picker-basic.tsx",
+        path: "components/registry/examples/date-time-range-picker-basic.tsx",
         type: "registry:example",
       },
     ],

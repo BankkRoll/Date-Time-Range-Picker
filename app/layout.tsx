@@ -32,14 +32,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <header className="sticky top-0 z-50 w-full px-2 md:px-20 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center justify-between">
               <div className="flex items-center gap-2">
                 <CalendarRange className="h-6 w-6" />
-                <span className="font-bold">Date Time Range Picker</span>
-                <Badge variant="outline" className="ml-2">
-                  v1.0.0
-                </Badge>
+                <span className="sm:block hidden font-bold">
+                  Date Time Range Picker
+                </span>
+                <span className="block sm:hidden font-bold">DTRP</span>
               </div>
               <div className="flex items-center gap-4">
                 <Button variant="outline" size="sm" asChild>
