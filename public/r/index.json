@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "name": "date-input",
+      "type": "registry:component",
+      "title": "Date Input",
+      "description": "A component for inputting dates with separate fields."
+    },
+    {
+      "name": "time-input",
+      "type": "registry:component",
+      "title": "Time Input",
+      "description": "A component for inputting time with hours, minutes, and AM/PM."
+    },
+    {
+      "name": "date-time-input",
+      "type": "registry:component",
+      "title": "Date Time Input",
+      "description": "A component that combines date and time input."
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:component",
+      "title": "Date Range Picker",
+      "description": "A component for selecting a range of dates with presets."
+    },
+    {
+      "name": "date-time-range-picker",
+      "type": "registry:component",
+      "title": "Date Time Range Picker",
+      "description": "A component for selecting a range of dates and times."
+    }
+  ]
+}
