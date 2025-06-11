@@ -10,12 +10,10 @@ import { CodeBlockTrigger } from "./code-block-trigger";
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string;
-  componentName?: string;
 }
 
 export function CodeBlock({
   expandButtonTitle = "View Code",
-  componentName,
   className,
   children,
   ...props

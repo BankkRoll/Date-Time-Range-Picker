@@ -258,7 +258,6 @@ export function RegistryCodeViewer({
 
       <CodeBlock
         expandButtonTitle={expandButtonTitle}
-        componentName={componentName}
       >
         <SyntaxHighlighter
           language={selectedFile ? getLanguage(selectedFile) : "tsx"}
