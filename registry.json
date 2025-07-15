@@ -54,7 +54,7 @@
       "type": "registry:component",
       "title": "Date Range Picker",
       "description": "A component for selecting a range of dates with presets.",
-      "dependencies": ["date-fns", "date-fns/locale", "lucide-react"],
+      "dependencies": ["date-fns", "lucide-react"],
       "registryDependencies": [
         "button",
         "calendar",
@@ -79,7 +79,7 @@
       "type": "registry:component",
       "title": "Date Time Range Picker",
       "description": "A component for selecting a range of dates and times.",
-      "dependencies": ["date-fns", "date-fns/locale", "lucide-react"],
+      "dependencies": ["date-fns", "lucide-react"],
       "registryDependencies": ["button", "calendar", "popover"],
       "files": [
         {
